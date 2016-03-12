@@ -228,7 +228,8 @@ function create_config( )
     "linkpv",
     "feedback",
     "Hello",
-    "Welcome"
+    "Welcome",
+    "antilink"
     },
     sudo_users = {tonumber(62283960)},--Sudo users
     disabled_channels = {},
