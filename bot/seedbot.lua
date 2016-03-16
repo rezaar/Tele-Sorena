@@ -232,6 +232,8 @@ function create_config( )
     "antilink",
     "upgradechat",
     "wai",
+    "myid",
+    "myphone"
     },
     sudo_users = {tonumber(62283960)},--Sudo users
     disabled_channels = {},
