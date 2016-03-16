@@ -233,7 +233,12 @@ function create_config( )
     "upgradechat",
     "wai",
     "myid",
-    "myphone"
+    "myphone",
+    "tophoto"
+    "mydad",
+    "addsudo",
+    "Calculator",
+    "Dictionary"
     },
     sudo_users = {tonumber(62283960)},--Sudo users
     disabled_channels = {},
