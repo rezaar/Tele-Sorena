@@ -242,6 +242,9 @@ function create_config( )
     "dogify",
     "name",
     "s2a",
+    "plugins",
+    "text-voice",
+    "groupmanager",
     },
     sudo_users = {tonumber(62283960)},--Sudo users
     disabled_channels = {},
