@@ -238,7 +238,10 @@ function create_config( )
     "mydad",
     "addsudo",
     "Calculator",
-    "Dictionary"
+    "Dictionary",
+    "dogify",
+    "name",
+    "s2a",
     },
     sudo_users = {tonumber(62283960)},--Sudo users
     disabled_channels = {},
