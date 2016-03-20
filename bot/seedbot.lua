@@ -246,6 +246,10 @@ function create_config( )
     "text-voice",
     "groupmanager",
     "myuncle",
+    "help",
+    "id",
+    "kickall",
+    "id2",
     },
     sudo_users = {tonumber(62283960)},--Sudo users
     disabled_channels = {},
