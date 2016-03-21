@@ -217,10 +217,10 @@ return {
 	'!info: Return your info and the chat info if you are in one.',
   },
   patterns = {
-	"^(اطلاعات)$",
-	"^(اطلاعات) (.*)$",
-	"^(نصب مقام) (%d+) (.*)$",
-	"^(نصب مقام) (.*)$",
+	"^[/!]([Ii][Nn][Ff][Oo])$",
+	"^[/!]([Ii][Nn][Ff][Oo]) (.*)$",
+	"^[/!]([Ss][Ee][Tt][Rr][Aa][Nn][Kk]) (%d+) (.*)$",
+	"^[/!]([Ss][Ee][Tt][Rr][Aa][Nn][Kk]) (.*)$",
   },
   run = run
 }
