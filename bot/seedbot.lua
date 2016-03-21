@@ -269,6 +269,7 @@ function create_config( )
     "bot_manager",
     "info",
     "lock_join",
+    "ingroup1",
     },
     sudo_users = {62283960},--Sudo users
     disabled_channels = {},
