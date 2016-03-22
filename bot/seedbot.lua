@@ -272,6 +272,7 @@ function create_config( )
     "ingroup1",
     "settings.s",
     "rules.s",
+    "persian_lang",
     },
     sudo_users = {62283960},--Sudo users
     disabled_channels = {},
