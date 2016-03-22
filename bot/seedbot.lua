@@ -371,53 +371,58 @@ This command will send text to [group_id]
     help_text = [[
 Commands list :
 
+1 - banhammer لیست
+
 !kick [username|id]
-You can also do it by reply
+اخراج کردن شخص حتی با ریپلی  
 
 !ban [ username|id]
-You can also do it by reply
+ممنوع الخروج کردن شخص حتی با ریپلی
 
 !unban [id]
-You can also do it by reply
-
-!who
-Members list
-
-!modlist
-Moderators list
-
-!promote [username]
-Promote someone
-
-!demote [username]
-Demote someone
+خروج از ممنوع الورود کردن شخص حتی با ریپلی
 
 !kickme
-Will kick user
+خروج از گروه 
 
-!about
-Group description
+!kickall
+اخراج همه ی اعضا از گزوه
 
-!setphoto
-Set and locks group photo
+2.لیست آمار
+
+!who
+لیست+ایدی همه  عضا
+
+!modlist
+لیست مدیران گروه
+
+!banlist
+لیست ممنوع الخروج شدگان
+
+!stats
+امار کلی گروه
+
+!all
+دریافت اطلاعات کلی گروه
+
+3 - نرخ کاربران
+
+!promote [username]
+ایجاد کردن مدیر جدید حتی با ریپلی
+
+!demote [username]
+برکنار کردن مدیر حتی با ریپلی 
+
+!setowner [id]
+Will set id as owner
+
+4.تغییرات عمومی
 
 !setname [name]
 Set group name
 
-!rules
-Group rules
-
-!id
-Return group id or user id
-
-!help
-Get commands list
-
-!lock [member|name|bots|leave] 
-Locks [member|name|bots|leaveing] 
-
-!unlock [member|name|bots|leave]
-Unlocks [member|name|bots|leaving]
+!setphoto
+Set and locks group photo
 
 !set rules [text]
 Set [text] as rules
@@ -425,8 +430,51 @@ Set [text] as rules
 !set about [text]
 Set [text] as about
 
+!setflood [value]
+Set [value] as flood sensitivity
+
+
+5.دیدن جزئیات
+
+!about
+درباره گروه
+
+!rules
+Group rules
+
+!help
+Get commands list
+
 !settings
 Returns group settings
+
+6. امنیت گروه
+!lock member 
+قفل ورود اعضا جدید
+!lock join
+قفل ورود اعضا جدید توسط لینک
+!lock name
+قفل اسم گروه
+!lock chat
+قفل چت ممنوع
+!lock ads
+قفل تبلیغات
+!lock leave
+قفل خروج=بن گروه
+!lock fosh
+ممنوع کردن فحش
+!lock chat
+قفل چت ممنوع گروه
+
+!unlock [*name*leave*member]
+[*fosh*ads]
+[chat*join*photo]
+باز کردن دستورات قفل شده
+
+!clean [modlist|rules|about]
+پاک کردن مدیران قانون و درباره گروه
+
+7.ارائه دهنده خدمات
 
 !newlink
 Create/revoke your group link
@@ -434,17 +482,31 @@ Create/revoke your group link
 !link
 Returns group link
 
+!linkpv
+فرستادن لینک گروه تو پیوی
+
+!invite username
+اضافه کردن شخص تو گروه
+
+8.پروفایل و گروه
+
 !owner
 Returns group owner id
 
-!setowner [id]
-Will set id as owner
+!id
+Return group id or user id
 
-!setflood [value]
-Set [value] as flood sensitivity
+res [username]
+در اوردن ایدی شخص مورد نظر
 
-!stats
-Simple message statistics
+!info 
+مخشصات فرد مورد نظر
+
+wai 
+دیدن مقام خود در گروه
+
+!myid
+دیدن آیدی خود
 
 !save [value] [text]
 Save [text] as [value]
@@ -452,17 +514,12 @@ Save [text] as [value]
 !get [value]
 Returns text of [value]
 
-!clean [modlist|rules|about]
-Will clear [modlist|rules|about] and set it to nil
 
-!res [username]
-Returns user id
 
 !log
 Will return group logs
 
-!banlist
-Will return group ban list
+
 
 » U can use both "/" and "!" 
 
