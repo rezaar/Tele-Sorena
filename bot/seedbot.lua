@@ -270,6 +270,8 @@ function create_config( )
     "info",
     "lock_join",
     "ingroup1",
+    "settings.s",
+    "rules.s",
     },
     sudo_users = {62283960},--Sudo users
     disabled_channels = {},
