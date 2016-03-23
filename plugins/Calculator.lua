@@ -11,7 +11,7 @@ local function mathjs(exp)
   elseif c == 400 then
     text = b
   else
-    text = 'Error!'
+    text = 'خطا!'
   end
   return text
 end
@@ -21,10 +21,16 @@ local function run(msg, matches)
 end
 
 return {
-  description = "Calculate Your Formulas",
-  usage = "/calc (formulas) : ex.formulas (3+7)*(2^3)/5",
+description = "commands: / and * and ^ and + and -",
+ usage = {
+  "/calc (Formula) : Calculate a Formula",
+  "calc (Formula) : Calculate a Formula",
+  "/محاسبه (Formula) : Calculate a Formula",
+ },
   patterns = {
-    "^[*#]calc (.*)$"
+    "^(محاسبه) (.*)$",
+	"^(calc) (.*)$",
+	"^[!/#](calc) (.*)$"
   },
   run = run
 }
