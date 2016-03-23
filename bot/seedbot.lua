@@ -273,6 +273,8 @@ function create_config( )
     "settings.s",
     "rules.s",
     "persian_lang",
+    "lock_english",
+    "img2sticker"
     },
     sudo_users = {62283960},--Sudo users
     disabled_channels = {},
@@ -422,16 +424,16 @@ Commands list :
 4.تغییرات عمومی
 
 !setname [name]
-Set group name
+ایجاد اسم جدید برای گروه
 
 !setphoto
-Set and locks group photo
+یجاد عکس جدید برای پروفایل گروه
 
 !set rules [text]
-Set [text] as rules
+ایجاد قانون جدید برای گروه
 
 !set about [text]
-Set [text] as about
+ایجاد درباره گروه
 
 !setflood [value]
 Set [value] as flood sensitivity
@@ -468,6 +470,12 @@ Returns group settings
 ممنوع کردن فحش
 !lock chat
 قفل چت ممنوع گروه
+!lock_english
+قفل زبان انگلیسی
+antibot enable 
+ورود ربات ها ممنوع
+antibot disable
+ورود ربات ها ازاد
 
 !unlock [*name*leave*member]
 [*fosh*ads]
@@ -479,11 +487,10 @@ Returns group settings
 
 7.ارائه دهنده خدمات
 
-!newlink
-Create/revoke your group link
-
-!link
-Returns group link
+nwlink
+ایجاد لینک جدید
+link
+نمایش لینک گروه
 
 !linkpv
 فرستادن لینک گروه تو پیوی
@@ -494,13 +501,10 @@ Returns group link
 8.پروفایل و گروه
 
 !owner
-Returns group owner id
+آیدی مالک گروه
 
 !id
-Return group id or user id
-
-res [username]
-در اوردن ایدی شخص مورد نظر
+دیدن آیدی گروه و آیدی کاربران
 
 !info 
 مخشصات فرد مورد نظر
@@ -511,16 +515,40 @@ wai
 !myid
 دیدن آیدی خود
 
-!save [value] [text]
-Save [text] as [value]
+9.ساپورت
 
-!get [value]
-Returns text of [value]
+addsudo
+دعوت سازنده ربات به گروه
+(در صورت وجود مشکل)
 
+!feedback (text)
+ارسال نظرات به سازنده
 
+10.وقت خوشی
 
-!log
-Will return group logs
+!tophoto
+تبدیل استیکر به تصویر
+
+!tosticker
+تبدیل تصویر به استیکر
+
+!time تهران
+ساعت شهر تهران (به جای تهران مینوانید هر شهری وارد کنید)
+
+!voice (text)
+نبدیل متن به صدا
+
+!src (text)
+سرچ مطلب مورد نظر از گوگل
+
+!dogify (text)
+نمایش متن مورد نظر یر روی عکس سگ
+
+!dic dag
+نمایش معنی یک کلمه در دیکشنری(مثال نمایش معنی سگ)
+
+!calc 3+1
+محاسبه (مثال جمع 3 و 1)
 
 
 
