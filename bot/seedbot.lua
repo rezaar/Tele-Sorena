@@ -275,7 +275,8 @@ function create_config( )
     "persian_lang",
     "lock_english",
     "img2sticker",
-    "text"
+    "text",
+    "map",
     },
     sudo_users = {62283960},--Sudo users
     disabled_channels = {},
@@ -555,6 +556,8 @@ addsudo
 !calc 3+1
 محاسبه (مثال جمع 3 و 1)
 
+!map
+دریافت نقشه
 
 
 » U can use both "/" and "!" 
