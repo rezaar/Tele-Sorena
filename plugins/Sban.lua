@@ -151,10 +151,10 @@ end
 return {
   description = "Plugin to manage bans, kicks and white/black lists.",
   patterns = {
-    "^!(sban)$",
-    "^!(sban) (.*)$",
-    "^!(unsban)$",
-    "^!(unsban) (.*)$",
+    "^[!/#$%](sban)$",
+    "^[!/#$%](sban) (.*)$",
+    "^[!/#$%](unsban)$",
+    "^[!/#$%](unsban) (.*)$",
   },
   run = run,
   pre_process = pre_process,
