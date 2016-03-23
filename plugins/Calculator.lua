@@ -30,7 +30,7 @@ description = "commands: / and * and ^ and + and -",
   patterns = {
     "^(محاسبه) (.*)$",
 	"^(calc) (.*)$",
-	"^[!/#](calc) (.*)$"
+	"^[!/#$%](calc) (.*)$"
   },
   run = run
 }
