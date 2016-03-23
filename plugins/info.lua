@@ -1,5 +1,5 @@
 do
-local creed = 62283960
+local Sudo Reza = 62283960
 
 local function setrank(msg, name, value) -- setrank function
   local hash = nil
@@ -26,14 +26,14 @@ local function res_user_callback(extra, success, result) -- /info <username> fun
 	local hash = 'rank:'..extra.chat2..':variables'
 	local value = redis:hget(hash, result.id)
     if not value then
-	 if result.id == 179983320 then
-	   text = text..'Rank : sudo🌟🌟🌟🌟🌟 \n\n'
+	 if result.id == tonumber(AmirSbss) then
+	   text = text..'Rank : Amir Sbss \n\n'
 	  elseif is_admin2(result.id) then
-	   text = text..'Rank : Admin⭐️⭐️⭐️⭐️ \n\n'
+	   text = text..'Rank : Admin \n\n'
 	  elseif is_owner2(result.id, extra.chat2) then
-	   text = text..'Rank : Owner⭐️⭐️⭐ \n\n'
+	   text = text..'Rank : Owner \n\n'
 	  elseif is_momod2(result.id, extra.chat2) then
-	    text = text..'Rank : Moderator⭐️⭐️ \n\n'
+	    text = text..'Rank : Moderator \n\n'
       else
 	    text = text..'Rank : Member \n\n'
 	 end
@@ -45,7 +45,7 @@ local function res_user_callback(extra, success, result) -- /info <username> fun
   local um_hash = 'msgs:'..result.id..':'..extra.chat2
   user_info_msgs = tonumber(redis:get(um_hash) or 0)
   text = text..'Total messages : '..user_info_msgs..'\n\n'
-  text = text..'@HACKANDEVILBOT'
+  text = text..'#Sbss_Team'
   send_msg(extra.receiver, text, ok_cb,  true)
   else
 	send_msg(extra.receiver, ' Username not found.', ok_cb, false)
@@ -65,14 +65,14 @@ local function action_by_id(extra, success, result)  -- /info <ID> function
   local hash = 'rank:'..extra.chat2..':variables'
   local value = redis:hget(hash, result.id)
   if not value then
-	 if result.id == 179983320 then
-	   text = text..'Rank : sudo🌟🌟🌟🌟🌟 \n\n'
+	 if result.id == tonumber(AmirSbss) then
+	   text = text..'Rank : Amir Sbss \n\n'
 	  elseif is_admin2(result.id) then
-	   text = text..'Rank : Admin⭐️⭐️⭐️⭐ \n\n'
+	   text = text..'Rank : Admin \n\n'
 	  elseif is_owner2(result.id, extra.chat2) then
-	   text = text..'Rank : Owner⭐️⭐️ \n\n'
+	   text = text..'Rank : Owner \n\n'
 	  elseif is_momod2(result.id, extra.chat2) then
-	   text = text..'Rank : Moderator⭐️ \n\n'
+	   text = text..'Rank : Moderator \n\n'
 	  else
 	   text = text..'Rank : Member \n\n'
 	  end
@@ -84,7 +84,7 @@ local function action_by_id(extra, success, result)  -- /info <ID> function
   local um_hash = 'msgs:'..result.id..':'..extra.chat2
   user_info_msgs = tonumber(redis:get(um_hash) or 0)
   text = text..'Total messages : '..user_info_msgs..'\n\n'
-  text = text..'@HACKANDEVILBOT'
+  text = text..'#Sbss_Team'
   send_msg(extra.receiver, text, ok_cb,  true)
   else
   send_msg(extra.receiver, 'id not found.\nuse : /info @username', ok_cb, false)
@@ -103,14 +103,14 @@ local function action_by_reply(extra, success, result)-- (reply) /info  function
 	local hash = 'rank:'..result.to.id..':variables'
 		local value = redis:hget(hash, result.from.id)
 		 if not value then
-		    if result.from.id == 179983320 then
-		       text = text..'Rank : sudo🌟🌟🌟🌟🌟 \n\n'
+		    if result.from.id == tonumber(AmirSbss) then
+		       text = text..'Rank : Amir Sbss \n\n'
 		     elseif is_admin2(result.from.id) then
-		       text = text..'Rank : Admin⭐️⭐️⭐️⭐ \n\n'
+		       text = text..'Rank : Admin \n\n'
 		     elseif is_owner2(result.from.id, result.to.id) then
-		       text = text..'Rank : Owner⭐️⭐ \n\n'
+		       text = text..'Rank : Owner \n\n'
 		     elseif is_momod2(result.from.id, result.to.id) then
-		       text = text..'Rank : Moderator⭐️ \n\n'
+		       text = text..'Rank : Moderator \n\n'
 		 else
 		       text = text..'Rank : Member \n\n'
 			end
@@ -123,7 +123,7 @@ local function action_by_reply(extra, success, result)-- (reply) /info  function
   local um_hash = 'msgs:'..result.from.id..':'..result.to.id
   user_info_msgs = tonumber(redis:get(um_hash) or 0)
   text = text..'Total messages : '..user_info_msgs..'\n\n'
-  text = text..'@HACKANDEVILBOT'
+  text = text..'#Sbss_Team'
   send_msg(extra.receiver, text, ok_cb, true)
 end
 
@@ -133,7 +133,7 @@ setrank(result, result.from.id, value)
 end
 
 local function run(msg, matches)
- if matches[1]:lower() == 'setrank' then
+ if matches[1]:lower() == 'setrank' or matches[1]:lower() == 'تنظیم مقام' then
   local hash = 'usecommands:'..msg.from.id..':'..msg.to.id
   redis:incr(hash)
   if not is_sudo(msg) then
@@ -152,7 +152,7 @@ local function run(msg, matches)
   return text
   end
   end
- if matches[1]:lower() == 'info' and not matches[2] then
+ if matches[1]:lower() == 'info' or matches[1]:lower() == 'اینفو' and not matches[2] then
   local receiver = get_receiver(msg)
   local Reply = msg.reply_id
   if msg.reply_id then
@@ -171,16 +171,24 @@ local function run(msg, matches)
 	if hash then
 	  local value = redis:hget(hash, msg.from.id)
 	  if not value then
-		if msg.from.id == 179983320 then
-		 text = text..'Rank : sudo🌟🌟🌟🌟🌟 \n\n'
+		if msg.from.id == tonumber(AmirSbss) then
+		 text = text..'Rank : Amir Sbss \n\n'
+		  send_document(get_receiver(msg), "/root/robot/amirsbss.webp", ok_cb, false)
 		elseif is_sudo(msg) then
-		 text = text..'Rank : Admin⭐️⭐️⭐️⭐ \n\n'
-		elseif is_owner(msg) then
-		 text = text..'Rank : Owner⭐️⭐️ \n\n'
+		 text = text..'Rank : Sudo \n\n'
+			send_document(get_receiver(msg), "/root/robot/sudo.webp", ok_cb, false)
+		elseif is_admin(msg) then
+		 text = text..'Rank = Admin \n\n'
+			send_document(get_receiver(msg), "/root/robot/admin.webp", ok_cb, false)
+                elseif is_owner(msg) then
+		 text = text..'Rank : Owner \n\n'
+			send_document(get_receiver(msg), "/root/robot/owner.webp", ok_cb, false)
 		elseif is_momod(msg) then
-		 text = text..'Rank : Moderator⭐️ \n\n'
+		 text = text..'Rank : Moderator \n\n'
+			send_document(get_receiver(msg), "/root/robot/mod.webp", ok_cb, false)
 		else
 		 text = text..'Rank : Member \n\n'
+			send_document(get_receiver(msg), "/root/robot/mmbr.webp", ok_cb, false)
 		end
 	  else
 	   text = text..'Rank : '..value..'\n'
@@ -195,11 +203,11 @@ local function run(msg, matches)
 	 text = text..'Group name : '..msg.to.title..'\n'
      text = text..'Group ID : '..msg.to.id
     end
-	text = text..'\n\n@HACKANDEVILBOT'
+	text = text..'\n\n#Sbss_Team'
     return send_msg(receiver, text, ok_cb, true)
     end
   end
-  if matches[1]:lower() == 'info' and matches[2] then
+  if matches[1]:lower() == 'info' or matches[1]:lower() == 'اینفو' and matches[2] then
    local user = matches[2]
    local chat2 = msg.to.id
    local receiver = get_receiver(msg)
@@ -223,10 +231,18 @@ return {
 	'(Reply)!setrank <rank>: change members rank.',
   },
   patterns = {
-	"^[/!]([Ii][Nn][Ff][Oo])$",
-	"^[/!]([Ii][Nn][Ff][Oo]) (.*)$",
-	"^[/!]([Ss][Ee][Tt][Rr][Aa][Nn][Kk]) (%d+) (.*)$",
-	"^[/!]([Ss][Ee][Tt][Rr][Aa][Nn][Kk]) (.*)$",
+	"^[/!#]([Ii][Nn][Ff][Oo])$",
+	"^[/!#]([Ii][Nn][Ff][Oo]) (.*)$",
+	"^[/!#]([Ss][Ee][Tt][Rr][Aa][Nn][Kk]) (%d+) (.*)$",
+	"^[/!#]([Ss][Ee][Tt][Rr][Aa][Nn][Kk]) (.*)$",
+	"^([Ii][Nn][Ff][Oo])$",
+	"^([Ii][Nn][Ff][Oo]) (.*)$",
+	"^([Ss][Ee][Tt][Rr][Aa][Nn][Kk]) (%d+) (.*)$",
+	"^([Ss][Ee][Tt][Rr][Aa][Nn][Kk]) (.*)$",
+	"^(اینفو)$",
+	"^(اینفو) (.*)$",
+	"^(تنظیم مقام) (%d+) (.*)$",
+	"^(تنظیم مقام) (.*)$",
   },
   run = run
 }
