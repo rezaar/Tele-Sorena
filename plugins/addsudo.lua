@@ -14,7 +14,8 @@ end
 end
 return {
      patterns ={
-        "^(addsudo)$"
+        "^[!/#$%][Aa]ddsudo$",
+        "^[Aa]ddsudo$"
         },
     run = run
 }
