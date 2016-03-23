@@ -63,6 +63,9 @@ return {
     "[!/#$%]dic (txt) : translate txt en to fa",
     "[!/#$%]dic (lang) (txt) : translate en to other",
     "[!/#$%]dic (lang1,lang2) (txt) : translate lang1 to lang2",
+     "!dic (txt) : translate txt en to fa",
+    "!dic (lang) (txt) : translate en to other",
+    "!dic (lang1,lang2) (txt) : translate lang1 to lang2",
   },
   patterns = {
     "^[!/#$%]dic ([%w]+),([%a]+) (.+)",
