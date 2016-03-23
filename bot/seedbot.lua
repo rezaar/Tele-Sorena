@@ -274,7 +274,8 @@ function create_config( )
     "rules.s",
     "persian_lang",
     "lock_english",
-    "img2sticker"
+    "img2sticker",
+    "text"
     },
     sudo_users = {62283960},--Sudo users
     disabled_channels = {},
@@ -535,7 +536,9 @@ addsudo
 !voice (text)
 نبدیل متن به صدا
 
-t2i
+!t2i
+تبدیل متن به عکس
+
 !time تهران
 ساعت شهر تهران (به جای تهران مینوانید هر شهری وارد کنید)
 
