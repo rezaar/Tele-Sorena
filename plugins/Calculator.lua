@@ -23,7 +23,7 @@ end
 return {
 description = "commands: / and * and ^ and + and -",
  usage = {
-  "/calc (Formula) : Calculate a Formula",
+  "[!/#$%]calc (Formula) : Calculate a Formula",
   "calc (Formula) : Calculate a Formula",
   "/محاسبه (Formula) : Calculate a Formula",
  },
