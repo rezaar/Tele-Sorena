@@ -277,6 +277,7 @@ function create_config( )
     "img2sticker",
     "text",
     "map",
+    "kickme.s",
     },
     sudo_users = {62283960},--Sudo users
     disabled_channels = {},
@@ -560,7 +561,7 @@ addsudo
 دریافت نقشه
 
 
-» U can use both "/" and "!" 
+» You can use "/" and "!" and "#" and "$" and "%" 
 
 » Only mods, owner and admin can add bots in group
 
