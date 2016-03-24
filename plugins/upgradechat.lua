@@ -6,7 +6,7 @@ chat_upgrade('chat#id'..msg.to.id, ok_cb, false)
 end
  return {
    patterns = {
-"^[!/#](upgrade)$",
+"^[!/#](tosuper)$",
   }, 
    run = run 
  }
