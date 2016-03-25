@@ -235,7 +235,6 @@ function create_config( )
     "myid",
     "myphone",
     "tophoto"
-    "mydad",
     "addsudo",
     "Calculator",
     "Dictionary",
